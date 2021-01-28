@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Card from './Card';
 import {products} from '../data/items';
-import { useSelector, useDispatch } from 'react-redux';
-import { agregarItem, eliminarItem } from '../store/reducers/cart/cartActions';
+import { useDispatch } from 'react-redux';
+import { agregarItem } from '../store/reducers/cart/cartActions';
 const Shopping = () => {
 
     const [items, setitems] = useState(products);
@@ -15,8 +15,9 @@ const Shopping = () => {
         dispatch(agregarItem([...item]));
     }
 
-    const remove = id => dispatch(eliminarItem(id));
-    
+    const remove = (params) => {
+       
+    }    
 
     return (
         <div>
